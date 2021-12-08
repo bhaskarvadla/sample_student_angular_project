@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+.clearfix {
+  clear: both;
+  overflow: hidden;
+  width: 100%;
+}
+
+.alerts_list,
+.messages_list {
+  float: left;
+  margin-left: 15px;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
+.alerts_list a,
+.messages_list a {
+  position: relative;
+  float: left;
+  width: 20px;
+  height: 20px;
+}
+.alerts_list a span,
+.messages_list a span {
+  position: absolute;
+  right: -10px;
+  top: -2px;
+  background: #ff0000;
+  color: #fff;
+  font-weight: 600;
+  font-size: 10px;
+  text-align: center;
+  line-height: 18px;
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+}
+/*.alerts_list a::after {
+  content: "\e123";
+}*/
+.messages_list a::after {
+  content: "\2709";
+}
+.alerts_list a::after,
+.messages_list a::after {
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  float: left;
+  margin-top: 4px;
+  color: #444;
+}

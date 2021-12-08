@@ -1,0 +1,6 @@
+.block_style_head{
+  content:'';
+  clear: both;
+  overflow: hidden;
+  display: block;
+}

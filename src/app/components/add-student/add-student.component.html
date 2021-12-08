@@ -1,0 +1,47 @@
+<div class="block_style_head">
+  <h1 mat-dialog-title> {{this.data.editMode === 1 ? 'Enter student Details' : 'Update student Details'}}</h1>
+  <mat-divider></mat-divider>
+  <br>
+  <div mat-dialog-content>
+    <form [formGroup]="createStudentForm">
+
+      <div class="row">
+        <div class="col-sm-4">
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName">
+          </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="secondName">
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4">
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+          </mat-form-field>
+        </div>
+        <div class="col-sm-4">
+          <mat-form-field appearance="outline">
+            <mat-label>Class</mat-label>
+            <input matInput formControlName="stdClass">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div mat-dialog-actions >
+        <button mat-raised-button color="primary" [disabled]="!createStudentForm.valid"
+        (click)="this.data.editMode === 1 ? saveData(createStudentForm.value) : updateData(createStudentForm.value)">
+          {{this.data.editMode === 1 ? 'Create' : 'Save'}}
+        </button>
+        <button mat-raised-button (click)="closeDialog()" [mat-dialog-close]="true">Cancel</button>
+      </div>
+
+    </form>
+  </div>
+</div>
